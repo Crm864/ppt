@@ -6,7 +6,7 @@ public class MoveWords{
     public static final int GANA = 1;
     public static final int PIERDE = 2;
 
-    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA"};
+    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA", "SPOCK", "LAGARTO"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
@@ -65,9 +65,37 @@ public class MoveWords{
 	    first_i = getIndex(first);
 	    second_i = getIndex(second);
 
-	    if (first_i == second_i) return EMPATE;
 	    
-	    return (( (first_i +1) % validMoves.length ) == second_i ) ? GANA: PIERDE;
+	    
+	    if (first.equals("TIJERAS") && second.equals("PAPEL")) return GANA;
+	    if (first.equals("TIJERAS") && second.equals("PIEDRA")) return PIERDE;
+	    if (first.equals("TIJERAS") && second.equals("SPOCK")) return PIERDE;
+	    if (first.equals("TIJERAS") && second.equals("LAGARTO")) return GANA;
+	    
+	    
+	    if (first.equals("PAPEL") && second.equals("TIJERAS")) return PIERDE;
+	    if (first.equals("PAPEL") && second.equals("PIEDRA")) return GANA;
+	    if (first.equals("PAPEL") && second.equals("SPOCK")) return GANA;
+	    if (first.equals("PAPEL") && second.equals("LAGARTO")) return PIERDE;
+	    
+	    if (first.equals("PIEDRA") && second.equals("TIJERAS")) return GANA;
+	    if (first.equals("PIEDRA") && second.equals("PAPEL")) return PIERDE;
+	    if (first.equals("PIEDRA") && second.equals("SPOCK")) return PIERDE;
+	    if (first.equals("PIEDRA") && second.equals("LAGARTO")) return GANA;
+	    
+	    if (first.equals("SPOCK") && second.equals("TIJERAS")) return GANA;
+	    if (first.equals("SPOCK") && second.equals("PAPEL")) return PIERDE;
+	    if (first.equals("SPOCK") && second.equals("PIEDRA")) return GANA;
+	    if (first.equals("SPOCK") && second.equals("LAGARTO")) return PIERDE;
+	    
+	    if (first.equals("LAGARTO") && second.equals("TIJERAS")) return PIERDE;
+	    if (first.equals("LAGARTO") && second.equals("PAPEL")) return GANA;
+	    if (first.equals("LAGARTO") && second.equals("PIEDRA")) return PIERDE;
+	    if (first.equals("LAGARTO") && second.equals("SPOCK")) return GANA;
+	    
+	    else return EMPATE;
+	    
+	    //return (( (first_i +1) % validMoves.length ) == second_i ) ? GANA: PIERDE;
 	}
 	
 } 
