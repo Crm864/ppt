@@ -6,7 +6,7 @@ public class MoveWords{
     public static final int GANA = 1;
     public static final int PIERDE = 2;
 
-    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA", "SPOCK", "LAGARTO"};
+    private static final String[] validMoves = {"TIJERAS", "PAPEL", "PIEDRA", "SEPIA", "TORITO"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
@@ -69,29 +69,29 @@ public class MoveWords{
 	    
 	    if (first.equals("TIJERAS") && second.equals("PAPEL")) return GANA;
 	    if (first.equals("TIJERAS") && second.equals("PIEDRA")) return PIERDE;
-	    if (first.equals("TIJERAS") && second.equals("SPOCK")) return PIERDE;
-	    if (first.equals("TIJERAS") && second.equals("LAGARTO")) return GANA;
+	    if (first.equals("TIJERAS") && second.equals("SEPIA")) return PIERDE;
+	    if (first.equals("TIJERAS") && second.equals("TORITO")) return GANA;
 	    
 	    
 	    if (first.equals("PAPEL") && second.equals("TIJERAS")) return PIERDE;
 	    if (first.equals("PAPEL") && second.equals("PIEDRA")) return GANA;
-	    if (first.equals("PAPEL") && second.equals("SPOCK")) return GANA;
-	    if (first.equals("PAPEL") && second.equals("LAGARTO")) return PIERDE;
+	    if (first.equals("PAPEL") && second.equals("SEPIA")) return GANA;
+	    if (first.equals("PAPEL") && second.equals("TORITO")) return PIERDE;
 	    
 	    if (first.equals("PIEDRA") && second.equals("TIJERAS")) return GANA;
 	    if (first.equals("PIEDRA") && second.equals("PAPEL")) return PIERDE;
-	    if (first.equals("PIEDRA") && second.equals("SPOCK")) return PIERDE;
-	    if (first.equals("PIEDRA") && second.equals("LAGARTO")) return GANA;
+	    if (first.equals("PIEDRA") && second.equals("SEPIA")) return PIERDE;
+	    if (first.equals("PIEDRA") && second.equals("TORITO")) return GANA;
 	    
-	    if (first.equals("SPOCK") && second.equals("TIJERAS")) return GANA;
-	    if (first.equals("SPOCK") && second.equals("PAPEL")) return PIERDE;
-	    if (first.equals("SPOCK") && second.equals("PIEDRA")) return GANA;
-	    if (first.equals("SPOCK") && second.equals("LAGARTO")) return PIERDE;
+	    if (first.equals("SEPIA") && second.equals("TIJERAS")) return GANA;
+	    if (first.equals("SEPIA") && second.equals("PAPEL")) return PIERDE;
+	    if (first.equals("SEPIA") && second.equals("PIEDRA")) return GANA;
+	    if (first.equals("SEPIA") && second.equals("TORITO")) return PIERDE;
 	    
-	    if (first.equals("LAGARTO") && second.equals("TIJERAS")) return PIERDE;
-	    if (first.equals("LAGARTO") && second.equals("PAPEL")) return GANA;
-	    if (first.equals("LAGARTO") && second.equals("PIEDRA")) return PIERDE;
-	    if (first.equals("LAGARTO") && second.equals("SPOCK")) return GANA;
+	    if (first.equals("TORITO") && second.equals("TIJERAS")) return PIERDE;
+	    if (first.equals("TORITO") && second.equals("PAPEL")) return GANA;
+	    if (first.equals("TORITO") && second.equals("PIEDRA")) return PIERDE;
+	    if (first.equals("TORITO") && second.equals("SEPIA")) return GANA;
 	    
 	    else return EMPATE;
 	    
